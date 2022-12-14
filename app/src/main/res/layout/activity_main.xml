@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#B8B3A3"
+
+        tools:context=".MainActivity">
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/btn_post"
+          android:layout_width="120dp"
+          android:layout_height="wrap_content"
+          android:text="POSTS"
+          android:layout_gravity="center"
+          android:layout_marginTop="150dp"
+          app:cornerRadius="20dp"
+          />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_Todo"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="TODOS"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="6dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_User"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="USERS"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="6dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_comment"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="COMMENTS"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="6dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_album"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="ALBUMS"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="6dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_photo"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="PHOTOS"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="6dp"
+            />
+
+
+    </LinearLayout>
+</layout>
