@@ -41,7 +41,7 @@ class ApiStore : AppCompatActivity(),View.OnClickListener  {
               startActivity(intent)
           }
           R.id.btn_tmdb ->{
-              val intent = Intent(this@ApiStore,tmdbActivity::class.java)
+              val intent = Intent(this@ApiStore,TmdbStore::class.java)
               startActivity(intent)
 
           }

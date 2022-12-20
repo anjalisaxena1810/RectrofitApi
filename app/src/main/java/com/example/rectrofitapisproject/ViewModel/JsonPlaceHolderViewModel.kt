@@ -35,6 +35,11 @@ class JsonPlaceHolderViewModel(val repository:JsonPlaceHolderRepository): ViewMo
         listAlbum = repository.getAlbum()
         return listAlbum
     }
+    var listuser = MutableLiveData<UserList>()
+    fun getUser():LiveData<UserList>{
+        listuser = repository.getUser()
+        return listuser
+    }
     var listProduct = MutableLiveData<ProductList>()
     fun getProducts():LiveData<ProductList>{
         listProduct = repository.getProducts()

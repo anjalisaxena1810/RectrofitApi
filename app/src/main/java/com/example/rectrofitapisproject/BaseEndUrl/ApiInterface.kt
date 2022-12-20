@@ -26,7 +26,7 @@ interface ApiInterface {
     @GET("/products")
     fun getProducts():Call<ProductList>
 
-    @GET("/jewelery")
+    @GET("/products/category/jewelery")
     fun getjewelery():Call<jeweleryList>
 
     @GET("/api/quotes")

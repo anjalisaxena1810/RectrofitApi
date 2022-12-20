@@ -19,8 +19,8 @@ data class jewerly(
     val category: String,
 
     @SerializedName("image")
-    val image: String,
-
-    @SerializedName("rating")
-    val rating: Rating
+    val image: String
+//
+//    @SerializedName("rating")
+//    val rating: Rating
 )

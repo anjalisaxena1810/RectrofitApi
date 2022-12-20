@@ -23,17 +23,19 @@ class jewelryRecyclerViewAdapter (val context:Context, val jeweleryList: jeweler
 
 
     override fun onBindViewHolder(holder: jewelryViewHolder, position: Int) {
-        val jewerly = jeweleryList[position]
-        Picasso.with(context).load(jewerly.image).into(holder.jewelryCustomViewBinding.imageView)
+
 
         holder.jewelryCustomViewBinding.id.text = jeweleryList.get(position).Id.toString()
         holder.jewelryCustomViewBinding.title.text = jeweleryList.get(position).title
         holder.jewelryCustomViewBinding.price.text = jeweleryList.get(position).price.toString()
         holder.jewelryCustomViewBinding.description.text = jeweleryList.get(position).description
         holder.jewelryCustomViewBinding.category.text = jeweleryList.get(position).category
-        holder.jewelryCustomViewBinding.rating.text = jeweleryList.get(position).rating.toString()
-//        holder.jewelryCustomViewBinding.count.text = jeweleryList.get(position).count.
-//        holder.jewelryCustomViewBinding.title.text = jeweleryList.get(position).title
+//        holder.jewelryCustomViewBinding.rating.text = jeweleryList.get(position).rating.toString()
+//        holder.jewelryCustomViewBinding.count.text = jeweleryList.get(position).rating.count
+//        holder.jewelryCustomViewBinding.rate.text = jeweleryList.get(position).rating.rate.toString()
+
+        val imageUri = jeweleryList[position].image
+        Picasso.with(context).load(imageUri).into( holder.jewelryCustomViewBinding.imageView)
     }
 
     override fun getItemCount(): Int {

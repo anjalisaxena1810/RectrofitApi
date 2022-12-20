@@ -1,4 +1,3 @@
 package com.example.rectrofitapisproject.Models
 
-class UserList {
-}
+class UserList:ArrayList<User>()

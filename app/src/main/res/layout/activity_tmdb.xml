@@ -7,18 +7,38 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".tmdbActivity">
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
+        android:orientation="vertical"
+        tools:context=".movieActivity">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_popular"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:id="@+id/recycler_view"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:text="Popular MOVIE "
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            app:cornerRadius="20dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_upcomingmovie"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="UPCOMING MOVIE"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="6dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_topmovie"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="TOP RATED MOVIE"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="6dp"
+            />
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </layout>

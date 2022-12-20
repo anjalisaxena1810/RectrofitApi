@@ -68,6 +68,8 @@ class JsonPlaceHolderRepository (val context: Context){
         return listAlbum
     }
 
+
+
     val listComment = MutableLiveData<CommentList>()
     fun getComment(): MutableLiveData<CommentList> {
         val call = RetrofitInstance.apiInterface.getComment()
@@ -92,6 +94,31 @@ class JsonPlaceHolderRepository (val context: Context){
 
         })
         return listComment
+    }
+    val listuser = MutableLiveData<UserList>()
+    fun getUser(): MutableLiveData<UserList> {
+        val call = RetrofitInstance.apiInterface.getUser()
+        call.enqueue(object : Callback<UserList> {
+            override fun onResponse(call: Call<UserList>, response: Response<UserList>) {
+                if (response.isSuccessful) {
+                    isLoading.postValue(false)
+                    val body = response.body()
+                    listuser.value = body!!
+                } else {
+                    isLoading.postValue(false)
+                    Log.d("Error", "onResponse: " + response.message())
+                }
+            }
+
+            override fun onFailure(call: Call<UserList>, t: Throwable) {
+                Toast(context).showCustomToast("No internet ", context as Activity)
+
+                isLoading.postValue(false)
+                Log.d("FAIL", "onFailure: " + t.message)
+            }
+
+        })
+        return listuser
     }
     val listPhoto = MutableLiveData<PhotoList>()
     fun getPhoto(): MutableLiveData<PhotoList> {
@@ -143,7 +170,7 @@ class JsonPlaceHolderRepository (val context: Context){
     }
     val listproduct = MutableLiveData<ProductList>()
     fun getProducts(): MutableLiveData<ProductList> {
-        val call = RetrofitInstance.apiInterface.getProducts()
+        val call = RetrofitInstance.apiInterfacefake.getProducts()
         call.enqueue(object : Callback<ProductList> {
             override fun onResponse(call: Call<ProductList>, response: Response<ProductList>) {
                 if (response.isSuccessful) {
@@ -167,7 +194,7 @@ class JsonPlaceHolderRepository (val context: Context){
     }
     val listjwerly = MutableLiveData<jeweleryList>()
     fun getjewelery(): MutableLiveData<jeweleryList> {
-        val call = RetrofitInstance.apiInterface.getjewelery()
+        val call = RetrofitInstance.apiInterfacefake.getjewelery()
         call.enqueue(object : Callback<jeweleryList> {
             override fun onResponse(call: Call<jeweleryList>, response: Response<jeweleryList>) {
                 if (response.isSuccessful) {
@@ -191,7 +218,7 @@ class JsonPlaceHolderRepository (val context: Context){
     }
     val listquotes = MutableLiveData<quotesList>()
     fun getquotes(): MutableLiveData<quotesList> {
-        val call = RetrofitInstance.apiInterface.getquotes()
+        val call = RetrofitInstance.apiInterfacequote.getquotes()
         call.enqueue(object : Callback<quotesList> {
             override fun onResponse(call: Call<quotesList>, response: Response<quotesList>) {
                 if (response.isSuccessful) {

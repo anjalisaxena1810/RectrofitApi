@@ -35,7 +35,7 @@ class ProductActivity : AppCompatActivity() {
         })
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         viewModel.getProducts().observe(this, Observer {
-            val adapter = ProductRecyclerViewAdapter(it)
+            val adapter = ProductRecyclerViewAdapter(this,it)
             binding.recyclerView.adapter = adapter
         })
 

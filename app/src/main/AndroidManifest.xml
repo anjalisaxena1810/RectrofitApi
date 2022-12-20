@@ -15,6 +15,27 @@
         android:theme="@style/Theme.RectrofitApisProject"
         tools:targetApi="31">
         <activity
+            android:name=".peopleActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".TvShowActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".TmdbStore"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".QuotesApiActivity"
             android:exported="false">
             <meta-data
@@ -22,7 +43,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".tmdbActivity"
+            android:name=".movieActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -36,6 +36,7 @@ plugins {
 }
 
 dependencies {
+    implementation 'androidx.core:core-ktx:+'
     def lifecycle_version = "2.5.1"
     // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
