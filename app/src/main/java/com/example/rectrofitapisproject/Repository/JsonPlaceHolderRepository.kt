@@ -241,6 +241,37 @@ class JsonPlaceHolderRepository (val context: Context){
         return listquotes
     }
 
+// Popularperson
+
+    val listpopperson = MutableLiveData<ArrayList<PopularPerson>>()
+
+    fun getpopularperson(Key:String): MutableLiveData<ArrayList<PopularPerson>> {
+
+        val call = RetrofitInstance.apiInterfacepopularpeople.getPopular(Key)
+
+        call.enqueue(object : Callback<PopularPersonList> {
+
+            override fun onResponse(call: Call<PopularPersonList>, response: Response<PopularPersonList>) {
+                if (response.isSuccessful) {
+                    isLoading.postValue(false)
+                    val body = response.body()
+                    listpopperson.value = body!!.peopleResult
+                } else {
+                    isLoading.postValue(false)
+                    Log.d("Error", "onResponse: " + response.message())
+                }
+            }
+
+            override fun onFailure(call: Call<PopularPersonList>, t: Throwable) {
+                Toast(context).showCustomToast("No internet ", context as Activity)
+
+                isLoading.postValue(false)
+                Log.d("FAIL", "onFailure: " + t.message)
+            }
+        })
+        return listpopperson
+    }
+
 
 
 

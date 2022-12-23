@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".TmdbStore">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_movie"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="MOVIE"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            app:cornerRadius="20dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_people"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="PEOPLE"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="6dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_tvshow"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="TV SHOWS"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="6dp"
+            />
+
+    </LinearLayout>
+</layout>

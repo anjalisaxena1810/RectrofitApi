@@ -34,4 +34,14 @@ object RetrofitInstance {
     val apiInterfacequote: ApiInterface by lazy {
         retrofitInstanceQuotes.build().create(ApiInterface::class.java)
     }
+
+    private val retrofitInstanceTMDB: Retrofit.Builder by lazy {
+
+        Retrofit.Builder().baseUrl(Constants.TMDBBASEURL)
+            .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
+    }
+
+    val apiInterfacepopularpeople: ApiInterface by lazy {
+        retrofitInstanceTMDB.build().create(ApiInterface::class.java)
+    }
 }

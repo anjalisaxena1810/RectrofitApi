@@ -3,6 +3,7 @@ package com.example.rectrofitapisproject.BaseEndUrl
 import com.example.rectrofitapisproject.Models.*
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface ApiInterface {
     @GET("/posts")
@@ -31,5 +32,9 @@ interface ApiInterface {
 
     @GET("/api/quotes")
     fun getquotes():Call<quotesList>
+
+    @GET("/3/person/popular?")
+    fun getPopular(@Query("api_key") key: String):Call<PopularPersonList>
+
 
 }

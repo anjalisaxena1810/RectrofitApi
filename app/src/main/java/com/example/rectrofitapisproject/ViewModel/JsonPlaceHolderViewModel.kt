@@ -55,6 +55,15 @@ class JsonPlaceHolderViewModel(val repository:JsonPlaceHolderRepository): ViewMo
         listquotes = repository.getquotes()
         return listquotes
     }
+    var listpopperson = MutableLiveData<ArrayList<PopularPerson>>()
+
+    fun getpopularperson(Key:String):LiveData<ArrayList<PopularPerson>>{
+
+        listpopperson = repository.getpopularperson(Key)
+
+        return listpopperson
+    }
+
 
 
 
